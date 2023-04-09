@@ -1,6 +1,6 @@
 import Quote from "./Quote";
 import Heart from "./Heart";
-import TaskManager from "./TaskManager";
+import Links from "./Links";
 
 const ContainerRight = () => {
   return (
@@ -11,7 +11,7 @@ const ContainerRight = () => {
       </div>
       <hr></hr>
       <div class="row">
-        <TaskManager />
+        <Links />
       </div>
     </div>
   )

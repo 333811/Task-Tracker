@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const CustomButton = ({ title, classes }) => {
+const CustomButton = ({ title, classes, custom }) => {
   return (
     <div class={classes}>
-      <button class="button">{title}</button>
+      <button class= {`button ${custom}`}>{title}</button>
     </div>
   )
 }
