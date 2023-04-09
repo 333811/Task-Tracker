@@ -1,12 +1,12 @@
 import Decorator from "./Decorator";
-import TaskManager from "./TaskManager";
+import ContainerRight from "./ContainerRight";
 
 const Page = () => {
   return (
     <div class="container-fluid">
       <div class="row">
-      <Decorator />
-      <TaskManager />
+        <Decorator />
+        <ContainerRight />
       </div>
     </div>
   )

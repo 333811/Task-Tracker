@@ -23,9 +23,16 @@ code {
     monospace;
 }
 
+div.sticky
+{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .logo {
   font-family: 'Rock Salt', cursive;
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 600;
   background-image: linear-gradient(var(--yellow), var(--peach), var(--pink));
   color: transparent;
@@ -86,14 +93,16 @@ code {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  height:3rem;
+  width: 7rem;
 }
 
-.button-55:hover {
+.button:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
-.button-55:focus {
+.button:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
@@ -136,3 +145,28 @@ hr::after {
   width: 10%;
   height: 1px;
 }
+
+.border
+{
+  border: 1px var(--white) solid;
+}
+
+.right
+{
+  float: right;
+}
+
+.center2 {
+  margin: auto;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.rightContainer
+{
+  background-image: url("https://www.pngmart.com/files/22/Minimalist-Aesthetic-Theme-Transparent-PNG.png");
+  background-size: cover;
+}
+
