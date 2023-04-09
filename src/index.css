@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 body {
   --blue: #4a6163;
@@ -15,7 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
 }
 
 code {
@@ -27,14 +27,13 @@ code {
   font-family: 'Rock Salt', cursive;
   font-size: 40px;
   font-weight: 600;
-  background-image: linear-gradient( var(--yellow), var(--peach), var(--pink));
+  background-image: linear-gradient(var(--yellow), var(--peach), var(--pink));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-.logoContainer
-{
+.logoContainer {
   background-color: var(--white);
   height: 100vh;
 }
@@ -48,12 +47,10 @@ code {
   transform: translate(-50%, -50%);
 }
 
-.quote
-{
-  font-family: 'Gruppo', cursive;
+.quote {
+  font-family: 'Delicious Handrawn', cursive;
   color: var(--white);
-  font-size: 30px;
-  font-weight: 100;
+  font-size: 2.3rem;
   text-align: right;
   padding: 5px;
 
@@ -98,4 +95,44 @@ code {
 
 .button-55:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.heart {  
+  height: 4cm;
+  display: block;
+  margin-right: auto;
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.row-1 {
+  padding: 10px 0px;
+
+}
+
+hr {
+  border-top-color: var(--white);
+  margin-bottom: 25px;
+  width: 70%;
+  height: 3px;
+}
+
+hr::before {
+  display: block;
+  margin-left: -10%;
+  margin-top: -1px;
+  content: "";
+  background: linear-gradient(to left, var(--white), var(--blue));
+  width: 10%;
+  height: 1px;
+}
+
+hr::after {
+  display: block;
+  margin-left: 100%;
+  margin-top: -1px;
+  content: "";
+  background: linear-gradient(to right, var(--white), var(--blue));
+  width: 10%;
+  height: 1px;
 }

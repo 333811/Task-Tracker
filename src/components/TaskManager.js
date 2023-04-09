@@ -1,13 +1,15 @@
 import Button from "./AddTask";
 import Quote from "./Quote";
+import Heart from "./Heart";
 
 const TaskManager = () => {
   return (
     <div class="col-7">
-      <div class="row">
+      <div class="row row-1">
         <Quote />
-        <img src="paris.jpg" alt="Paris" width="300" height="300"></img>
+        <Heart />
       </div>
+      <hr></hr>
       <div class="row">
         <Button />
       </div>
