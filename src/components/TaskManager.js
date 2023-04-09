@@ -5,11 +5,11 @@ const TaskManager = () => {
     <div class="col-12 center">
       <div class="row">
         <div class="col-6 right">
-        <CustomButton title={"Login"} classes={"right"} />
-      </div>
-      <div class="col-6">
-        <CustomButton title={"Sign-Up"}/>
-      </div>
+          <CustomButton title={"Login"} classes={"right"} />
+        </div>
+        <div class="col-6">
+          <CustomButton title={"Sign-Up"} />
+        </div>
       </div>
     </div>
 

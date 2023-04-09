@@ -23,8 +23,7 @@ code {
     monospace;
 }
 
-div.sticky
-{
+div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -93,7 +92,7 @@ div.sticky
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  height:3rem;
+  height: 3rem;
   width: 7rem;
 }
 
@@ -106,7 +105,7 @@ div.sticky
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
-.heart {  
+.heart {
   height: 4cm;
   display: block;
   margin-right: auto;
@@ -146,13 +145,11 @@ hr::after {
   height: 1px;
 }
 
-.border
-{
+.border {
   border: 1px var(--white) solid;
 }
 
-.right
-{
+.right {
   float: right;
 }
 
@@ -164,9 +161,7 @@ hr::after {
   left: 50%;
 }
 
-.rightContainer
-{
+.rightContainer {
   background-image: url("https://www.pngmart.com/files/22/Minimalist-Aesthetic-Theme-Transparent-PNG.png");
   background-size: cover;
 }
-
