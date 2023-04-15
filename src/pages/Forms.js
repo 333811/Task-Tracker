@@ -10,7 +10,7 @@ const Forms = () => {
             <div class="forms row">
                 <Decorator />
                 <div class="section col-7">
-                    <div class="container flex-child">
+                    <div class="container">
                         <div class="row full-height justify-content-center">
                             <div class="col-12 text-center align-self-center py-5">
                                 <div class="pb-5 pt-5 pt-sm-2 text-center">

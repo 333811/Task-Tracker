@@ -11,10 +11,10 @@ body {
 }
 
 .forms {
-  background-color: var(--pink);
+  background-color: var(--white);
   background-image: url("https://www.pngmart.com/files/22/Minimalist-Aesthetic-Theme-Transparent-PNG.png");
-  background-size: fit;
-
+  background-size: 10cm;
+  background-repeat: repeat;
 }
 
 a {
@@ -86,6 +86,7 @@ h6 span {
   margin: 10px auto;
   cursor: pointer;
   background-color: var(--white);
+  border: 1px var(--blue) solid;
 
 }
 
