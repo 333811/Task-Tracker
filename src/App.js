@@ -1,10 +1,13 @@
-import Page from "./components/Page";
+import Forms from "./pages/Forms";
+import LandingPage from "./pages/LandingPage";
+import {Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Page />
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/Login" element={<Forms />} />
+    </Routes>
   );
 }
 
