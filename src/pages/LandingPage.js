@@ -3,7 +3,7 @@ import ContainerRight from "./LandComponents/ContainerRight";
 
 const LandingPage = () => {
   return (
-    <div class="container-fluid">
+    <div class="container-fluid background">
       <div class="row">
         <Decorator />
         <ContainerRight />
