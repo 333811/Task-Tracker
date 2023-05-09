@@ -1,0 +1,55 @@
+body {
+  --blue: #4a6163;
+  --white: #f9faf4;
+  --peach: #f9a66c;
+  --yellow: #ffc94b;
+  --pink: #f17a7e;
+  background-color: var(--white);
+  background-image: url("https://www.pngmart.com/files/22/Minimalist-Aesthetic-Theme-Transparent-PNG.png");
+  background-size: 10cm;
+  background-repeat: repeat;
+}
+
+.rbc-day-bg
+{
+  background: rgba(241, 122, 126, 0.95);
+
+}
+
+.rbc-off-range-bg
+{
+  background: rgba(249, 250, 244, 0.3);
+}
+
+.rbc-button-link
+{
+ color: black;
+}
+
+.rbc-btn-group
+{
+  background: rgba(249, 250, 244, 0.7);
+}
+
+.rbc-toolbar-label
+{
+  font-family: 'Delicious Handrawn', cursive;
+  font-size: 3rem;
+  background-image: linear-gradient(var(--yellow), var(--peach), var(--pink));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.rbc-event
+{
+  background-color: var(--peach);
+  border: 1px var(--white) solid;
+}
+
+.rbc-header
+{
+  background-color: #4a6163;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
