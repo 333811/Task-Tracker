@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/Login" element={<Forms />} />
+      <Route path="/LoginSignup" element={<Forms />} />
       <Route path="/Calendar" element={<EventCalendar />} />
       <Route path="/MyTasks" element={<MyTasks />} />
       <Route path="/TaskList" element={<TaskList />} />

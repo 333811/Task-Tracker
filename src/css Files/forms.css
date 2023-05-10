@@ -194,7 +194,7 @@ h6 span {
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: var(--white);
+  color: var(--blue);
   background-color: var(--white);
   border: none;
   -webkit-transition: all 200ms linear;
@@ -278,4 +278,9 @@ h6 span {
   display: flex;
   justify-content: center;
   align-items: right;
+}
+
+.border-right
+{
+  border-right: 1cm black solid;
 }

@@ -8,7 +8,7 @@ const Forms = () => {
     return (
         <div class="container-fluid">
             <div class="forms row">
-                <Decorator />
+                <Decorator custom={"border-right"}/>
                 <div class="section col-7">
                     <div class="container">
                         <div class="row full-height justify-content-center">
