@@ -7,7 +7,7 @@ import React from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-datepicker/dist/react-datepicker.css";import "../css Files/calendar.css";
-import "D:/Task-Tracker/src/css Files/sidebar.css";
+import "../css Files/sidebar.css";
 
 //import { useState } from "react";
 //import DateFnsUtils from '@date-io/date-fns';
