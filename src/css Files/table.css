@@ -1,0 +1,12 @@
+table {
+
+    border: 1px solid #ccc;
+    width: 100%;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: left;
+}
+
+tr {
+    border: 1px solid #ccc;
+}

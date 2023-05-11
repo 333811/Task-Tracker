@@ -16,6 +16,17 @@ body {
 
 }
 
+.rbc-day-slot, .rbc-time-header {
+  background-color: rgba(249, 250, 244, 0.7);
+}
+
+.rbc-agenda-table {
+  background-color: #4a6163;
+}
+
+.rbc-time-view, .rbc-time-content, .rbc-time-gutter, .rbc-day-slot, .rbc-label, .rbc-events-container, .rbc-timeslot-group, .rbc-time-header-content{
+  border-color: #232f30;
+}
 .rbc-off-range-bg
 {
   background: rgba(249, 250, 244, 0.3);
@@ -52,4 +63,35 @@ body {
   background-color: #4a6163;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.rbc-label {
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+}
+
+.sidenav {
+  width: 12%;
+}
+
+.calendar {
+  flex: 1;
+  margin-left: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  
+  .sidenav {
+    width: 100%;
+  }
+  
+  .calendar {
+    margin-top: 20px;
+  }
 }
