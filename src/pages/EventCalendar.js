@@ -2,12 +2,20 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import Sidebar from "../GlobalComponents/Sidebar";
-import React from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+
+import React from "react";
+
+import PopupForm from './EventComponents/PopupForm.js';
+
+
+import Sidebar from "./EventComponents/Sidebar";
+
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import "react-datepicker/dist/react-datepicker.css";import "../css Files/calendar.css";
+import "react-datepicker/dist/react-datepicker.css";
 import "../css Files/sidebar.css";
+import "../css Files/calendar.css";
+
 
 //import { useState } from "react";
 //import DateFnsUtils from '@date-io/date-fns';
@@ -39,8 +47,8 @@ const events = [
     },
     {
         title: "Conference",
-        start: new Date(2023, 4, 20),
-        end: new Date(2023, 4, 23),
+        start: new Date("Fri May 19 2023 00:00:00 GMT-0700 (Yukon Time)"),
+        end: new Date("Wed May 31 2023 12:00:00 GMT-0700 (Yukon Time)"),
     },
 ];
 
@@ -51,13 +59,13 @@ const EventCalendar = () => {
             <div className="sidenav">
             <Sidebar />
             </div>
-
             <div class="calendar">
                 <Calendar
                 class=""
                 localizer={localizer} events={events} startAccessor="start" endAccessor="end" 
                 style={{ height: 550, margin: "50px"}} />
             </div>
+            <PopupForm />
         </div>
     )
 }

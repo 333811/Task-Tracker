@@ -45,8 +45,8 @@ body {
 .rbc-toolbar-label
 {
   font-family: 'Delicious Handrawn', cursive;
-  font-size: 3rem;
   background-image: linear-gradient(var(--yellow), var(--peach), var(--pink));
+  font-size: 3rem;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
