@@ -57,6 +57,7 @@ const events = [
 
 const EventCalendar = () => {
     const location = useLocation()
+    console.log(location.state.id, location.state.name)
 
     return (
         <div className="app">

@@ -12,14 +12,14 @@ const CardFront = () => {
 
     async function submit(e) {
         e.preventDefault();
-        
+
         try {
             await axios.post("http://localhost:5000/login", {
                 email, password
             }).then(res => {
                 if (res.data === "exist") {
                     console.log("i was here");
-                    history("/Calendar", { state: { id: email } })
+                    history("/Calendar", { state: { id: email} })
                 }
                 else if (res.data === "notexist") {
                     alert("Account does not exist");
