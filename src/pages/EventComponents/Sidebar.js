@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../css Files/sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = (id) => {
   return (
     <div class="sidenav">
       <div class="profile">

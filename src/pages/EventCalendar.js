@@ -3,6 +3,7 @@ import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import React from "react";
 
@@ -54,16 +55,18 @@ const events = [
 
 
 const EventCalendar = () => {
+    const location = useLocation()
+
     return (
         <div className="app">
             <div className="sidenav">
-            <Sidebar />
+                <Sidebar id={location.state.id}/>
             </div>
             <div class="calendar">
                 <Calendar
-                class=""
-                localizer={localizer} events={events} startAccessor="start" endAccessor="end" 
-                style={{ height: 550, margin: "50px"}} />
+                    class=""
+                    localizer={localizer} events={events} startAccessor="start" endAccessor="end"
+                    style={{ height: 550, margin: "50px" }} />
             </div>
             <PopupForm />
         </div>

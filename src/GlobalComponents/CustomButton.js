@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 
-const CustomButton = ({ title, classes, custom, link}) => {
-  const navigate= useNavigate();
+const CustomButton = ({ title, classes, custom, type, onClick }) => {
+  const navigate = useNavigate();
   return (
     <div class={classes}>
-      <button class= {`button ${custom}`} 
-              onClick={() => navigate(`${link}`)}>{title}</button>
+      <button class={`button ${custom}`}
+        onClick={onClick}
+        type={type}>{title}</button>
     </div>
   )
 }
@@ -15,7 +16,7 @@ const CustomButton = ({ title, classes, custom, link}) => {
 CustomButton.defaultProps = {
   title: "No Title",
   classes: "",
-  link: "/",
+  type: "submit",
 }
 
 CustomButton.propTypes = {
