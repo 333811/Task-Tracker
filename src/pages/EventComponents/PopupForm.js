@@ -10,15 +10,26 @@ function PopupForm() {
         setIsOpen(!isOpen);
     }
 
-    return <div className='position'>
-        
-        <input value="Add Event +" type="button" className="pbtn" onClick={togglePopup}/>
-        {isOpen && <Popup
-            content={<> <AddEvent />
-            </>}
-            handleClose={togglePopup}
-        />}
-    </div>
+    const handleClose = () => {
+        setIsOpen(false);
+    }
+
+    return (
+        <div className='position'>
+            <input value="Add Event +" type="button" className="pbtn" onClick={togglePopup}/>
+            {isOpen && (
+                <Popup
+                    content={
+                        <>
+                            <AddEvent />
+                            <button onClick={handleClose}>Close</button> {/* Close button */}
+                        </>
+                    }
+                    handleClose={handleClose}
+                />
+            )}
+        </div>
+    );
 }
 
 export default PopupForm;

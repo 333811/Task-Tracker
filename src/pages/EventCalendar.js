@@ -60,7 +60,7 @@ const EventCalendar = () => {
     return (
         <div className="app">
             <div className="sidenav">
-                <Sidebar id={location.state.id}/>
+                <Sidebar id= {location.state} />
             </div>
             <div class="calendar">
                 <Calendar
