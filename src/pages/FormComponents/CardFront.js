@@ -14,7 +14,6 @@ const CardFront = () => {
         e.preventDefault();
         
         try {
-            console.log("i was here0");
             await axios.post("http://localhost:5000/login", {
                 email, password
             }).then(res => {
@@ -36,17 +35,14 @@ const CardFront = () => {
             console.log("i was here e");
         }
     }
-
-    const onChangeE = (event) => {
-        setEmail(event.target.value);
+    const onChangeE = (value) => {
+        setEmail(value);
     }
 
-    const onChangeP = (event) => {
-        setPassword(event.target.value);
+    const onChangeP = (value) => {
+        setPassword(value);
     }
-    function onTodoChange(value){
-        this.props.setParentValue(value);
-    }
+
 
     return (
         <div class="card-front">
@@ -56,19 +52,23 @@ const CardFront = () => {
                     <form action="/login" method="POST">
                         <div class="form-group">
                             <InputField
-                                onChange={e => this.onTodoChange(e.target.value)}
+                                name={"email"}
                                 type={"email"}
                                 classes={"form-style"}
                                 placeholder={"Your Email"}
-                                icon={"fa fa-user"} />
+                                icon={"fa fa-user"}
+                                value={email}
+                                onChange={onChangeE} />
                         </div>
                         <div class="form-group mt-2">
                             <InputField
-                                onChange={e => onTodoChange(e.target.value)}
+                                name={"password"}
                                 type={"password"}
                                 classes={"form-style"}
                                 placeholder={"Your password"}
-                                icon={"fa fa-lock"} />
+                                icon={"fa fa-lock"}
+                                value={password}
+                                onChange={onChangeP} />
                         </div>
                         <CustomButton title={"Submit⇝"} classes={"flexCenter"} custom={"btn button mt-4"} onClick={submit} />
                         <p class="mb-0 mt-4 text-center"><a href="https://codepen.io/technext/pen/eYvoYgM?editors=1100" class="link">Forgot your password?</a></p>

@@ -15,7 +15,6 @@ app.get("/", cors(), (req, res) => {
 
 app.post("/login", async (req, res) => {
     const { email, password } = req.body
-    console.log("heree")
 
     try {
         const check = await users.findOne({ email: email })
@@ -46,14 +45,13 @@ app.post("/signup", async (req, res) => {
     }
 
     try {
-        const check = await collection.findOne({ email: email })
-
+        const check = await users.findOne({ email: email })
         if (check) {
             res.json("exist")
         }
         else {
             res.json("notexist")
-            await collection.insertMany([data])
+            await users.insertMany([data])
         }
 
     }

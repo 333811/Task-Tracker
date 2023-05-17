@@ -16,6 +16,7 @@ const CardBack = () => {
         e.preventDefault();
 
         try {
+            console.log(email, name, password)
             await axios.post("http://localhost:5000/signup", {
                 name, email, password
             }).then(res => {
@@ -36,16 +37,16 @@ const CardBack = () => {
         }
     }
 
-    const onChangeN = (event) => {
-        setName(event.target.value);
+    const onChangeN = (value) => {
+        setName(value);
     }
 
-    const onChangeE = (event) => {
-        setEmail(event.target.value);
+    const onChangeE = (value) => {
+        setEmail(value);
     }
 
-    const onChangeP = (event) => {
-        setPassword(event.target.value);
+    const onChangeP = (value) => {
+        setPassword(value);
     }
 
     return (
@@ -56,27 +57,33 @@ const CardBack = () => {
                     <form action="/signup" method="POST">
                         <div class="form-group">
                             <InputField
-                                onClick={event => onChangeN(event)}
+                                name={"fname"}
                                 type={"text"}
                                 classes={"form-style"}
                                 placeholder={"Your Full Name"}
-                                icon={"fa fa-user"} />
+                                icon={"fa fa-user"}
+                                value={name}
+                                onChange={onChangeN} />
                         </div>
                         <div class="form-group mt-2">
                             <InputField
-                                onClick={event => onChangeE(event)}
+                                name={"email"}
                                 type={"email"}
                                 classes={"form-style"}
                                 placeholder={"Your Email"}
-                                icon={"fa fa-envelope"} />
+                                icon={"fa fa-envelope"}
+                                value={email}
+                                onChange={onChangeE} />
                         </div>
                         <div class="form-group mt-2">
                             <InputField
-                                onClick={event => onChangeP(event)}
+                                name={"pass"}
                                 type={"password"}
                                 classes={"form-style"}
                                 placeholder={"Your password"}
-                                icon={"fa fa-lock"} />
+                                icon={"fa fa-lock"}
+                                value={password}
+                                onChange={onChangeP} />
 
                         </div>
                         <CustomButton title={"Submit⇝"} classes={"flexCenter"} custom={"btn button mt-4"} onClick={submit} />

@@ -1,11 +1,23 @@
-import React from 'react'
+import React from "react";
 
-const InputField = ({type , classes, placeholder, icon,value, onChange}) => {
-    
+const InputField = ({ type, inputname, classes, placeholder, icon, value, onChange }) => {
+
+
+    const handleInputChange = (event) => {
+        const { value } = event.target;
+        onChange(value);
+    };
+
     return (
         <div class="form-group">
-            <input type={type} class={classes} placeholder={placeholder} value={value} onChange={onChange}></input>
-            <i class= {`${icon} input-icon`}></i>
+            <input name={inputname}
+                type={type}
+                class={classes}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleInputChange}>
+            </input>
+            <i class={`${icon} input-icon`}></i>
         </div>
     )
 }
