@@ -18,7 +18,6 @@ const CardFront = () => {
                 email, password
             }).then(res => {
                 if (res.data === "exist") {
-                    console.log("i was here");
                     history("/Calendar", { state: { id: email} })
                 }
                 else if (res.data === "notexist") {

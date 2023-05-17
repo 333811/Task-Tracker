@@ -1,5 +1,6 @@
 const express = require("express")
-const users = require("./mongo")
+const users = require("./mongoUsers")
+const events = require("./mongoEvents")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -18,7 +19,6 @@ app.post("/login", async (req, res) => {
 
     try {
         const check = await users.findOne({ email: email })
-        console.log(check)
         if (check) {
             res.json("exist")
         }
@@ -61,6 +61,25 @@ app.post("/signup", async (req, res) => {
 
 })
 
+app.post("/addEvent", async (req, res) => {
+    const { email, title, start, end } = req.body
+
+    const data = {
+        email: email,
+        title: title,
+        start: start,
+        end: end
+    }
+    console.log(email, title, start, end)
+    try {
+        res.json("added")
+        await events.insertMany([data])
+    }
+    catch (e) {
+        res.json("fail")
+    }
+
+})
 app.listen(5000, () => {
     console.log("Listening on port:5000");
 })

@@ -4,7 +4,7 @@ import AddEvent from './AddEvent.js';
 
 import "../../css Files/popup.css";
 
-function PopupForm() {
+function PopupForm({id}) {
     const [isOpen, setIsOpen] = useState(false);
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -21,7 +21,7 @@ function PopupForm() {
                 <Popup
                     content={
                         <>
-                            <AddEvent />
+                            <AddEvent id={id}/>
                             <button onClick={handleClose}>Close</button> {/* Close button */}
                         </>
                     }

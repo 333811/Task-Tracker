@@ -49,15 +49,14 @@ const events = [
     {
         title: "Conference",
 
-        start: new Date("Fri May 19 2023 00:00:00 GMT-0700 (Yukon Time)"),
-        end: new Date("Wed May 31 2023 12:00:00 GMT-0700 (Yukon Time)"),
+        start: new Date("2023-05-17T18:00:00.000Z"),
+        end: new Date("2023-05-17T18:00:00.000Z"),
     },
 ];
 
 
 const EventCalendar = () => {
     const location = useLocation()
-    console.log(location.state.id, location.state.name)
 
     return (
         <div className="app">
@@ -66,11 +65,10 @@ const EventCalendar = () => {
             </div>
             <div class="calendar">
                 <Calendar
-                    class=""
                     localizer={localizer} events={events} startAccessor="start" endAccessor="end"
                     style={{ height: 550, margin: "50px" }} />
             </div>
-            <PopupForm />
+            <PopupForm id={location.state.id}/>
         </div>
     )
 }
