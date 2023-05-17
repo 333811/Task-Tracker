@@ -30,11 +30,12 @@ body {
 
 .close-icon {
   content: 'x';
+  z-index: 1000;
   cursor: pointer;
   position: fixed;
   right: calc(43% - 30px);
   top: calc(105vh - 85vh - 33px);
-  color: white;
+  color: black;
   background: var(--pint);
   padding: 2px;
   width: 30px;
