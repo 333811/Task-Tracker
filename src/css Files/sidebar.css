@@ -13,11 +13,12 @@
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 10px;
   text-decoration: none;
   /* font-size: 25px; */
   color: #ffffff;
   display: block;
+  font-size: 1.2rem;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -39,7 +40,9 @@
 
 a {
   text-align: center;
+  overflow-wrap: break-word;
 }
+
 img {
   width: 50%;
   height: auto;
@@ -70,4 +73,11 @@ img {
   text-align: center;
   font-size: medium;
   margin-bottom: 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: medium;
+  margin-bottom: 0;
+  margin-top: 1rem;
 }
