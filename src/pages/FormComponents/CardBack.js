@@ -16,7 +16,6 @@ const CardBack = () => {
         e.preventDefault();
 
         try {
-            console.log(email, name, password)
             await axios.post("http://localhost:5000/signup", {
                 name, email, password
             }).then(res => {

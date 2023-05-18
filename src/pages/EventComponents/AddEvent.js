@@ -3,16 +3,37 @@ import { Controller, useForm } from "react-hook-form";
 import DateTimePicker from 'react-datetime-picker';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import axios from "axios";
 
 import 'react-calendar/dist/Calendar.css';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 
+const AddEvent = ({ id }) => {
+    const { register, control, handleSubmit, formState: { errors }, getValues } = useForm();
 
-export default function AddEvent() {
-    const { register, control, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    async function onSubmit() {
+        console.log("here", getValues(["Title"]));
+        const email = id;
+        const title = getValues('Title');
+        const start = getValues('StartDate');
+        const end = getValues('EndDate');
+        console.log(title, start, end);
+        try {
+            await axios.post("http://localhost:5000/addEvent", {
+                email, title, start, end
+            }).then(res => {
+                alert("Event has been added to your Calendar.")
+            })
+                .catch(e => {
+                    alert("Something went wrong. Event could not be added.")
+                    console.log(e);
+                })
+        }
+        catch (e) {
+            console.log(e);
+        }
 
-    console.log(watch("example")); // watch input value by passing the name of it
+    };
 
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -74,7 +95,6 @@ export default function AddEvent() {
                                 />
                                 <br></br>
                                 {errors.EndDate && <span>This field is required</span>}
-                                <br></br>
                             </div>
                             
                             <div class="submit-btn">
@@ -86,10 +106,12 @@ export default function AddEvent() {
                     </div>
                 </div>
 
-                
+
             </form>
         </LocalizationProvider>
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
 
     );
 }
+
+export default AddEvent
