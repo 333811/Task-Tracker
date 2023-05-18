@@ -1,9 +1,12 @@
+import "../../css Files/popup.css";
 import { Controller, useForm } from "react-hook-form";
 import DateTimePicker from 'react-datetime-picker';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+
 import 'react-calendar/dist/Calendar.css';
 import 'react-datetime-picker/dist/DateTimePicker.css';
+
 
 export default function AddEvent() {
     const { register, control, handleSubmit, watch, formState: { errors } } = useForm();
@@ -17,13 +20,13 @@ export default function AddEvent() {
                 <div class="card-front white">
                     <div class="center-wrap">
                         <div class="section text-center">
-                            <h4 class="mb-4 pb-3">Add Event</h4>
+                            <h4 class="mb-4 pb-1">Add Event</h4>
                             <div class="form-group mt-1">
                                 <input {...register("Title", { required: true })} />
                                 <br></br>
                                 {errors.Title && <span>This field is required</span>}
                             </div>
-                            <div class="form-group mt-2">
+                            <div class="form-group mt-3 pt-3" style={{ border: "none" }}>
                                 <Controller
                                     name={"StartDate"}
                                     control={control}
@@ -73,7 +76,12 @@ export default function AddEvent() {
                                 {errors.EndDate && <span>This field is required</span>}
                                 <br></br>
                             </div>
-                            <input type="submit" class="mt-4"/>
+                            
+                            <div class="submit-btn">
+                                <button type="submit" class="btn btn-block mt-3">
+                                    Submit
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

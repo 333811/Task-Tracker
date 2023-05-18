@@ -9,7 +9,7 @@ body {
 .popup-box {
   position: fixed;
   z-index:100;
-  background: #00000050;
+  background: #00000073;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -19,32 +19,35 @@ body {
 .box {
   position: relative;
   margin: 0 auto;
-  width: 30%;
-  height: 60%;
+  width: 26%;
+  height: 55%;
   margin-top: calc(100vh - 85vh - 20px);
   border-radius: 4px;
   padding: 20px;
-  border: 1px solid #999;
   overflow: auto;
 }
 
+div.react-datetime-picker__wrapper{
+  border: none;
+}
 .close-icon {
-  content: 'x';
   z-index: 1000;
   cursor: pointer;
   position: fixed;
-  right: calc(43% - 30px);
+  right: calc(40.5% - 30px);
   top: calc(105vh - 85vh - 33px);
   color: black;
-  background: var(--pint);
-  padding: 2px;
-  width: 30px;
-  height: 30px;
-  border-radius: 70%;
-  line-height: 20px;
-  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #999;
-  font-size: 20px;
+  padding-top: 5.5px;
+  padding-bottom: 5px;
+}
+
+.react-datetime-picker__wrapper {
+  border: none;
 }
 
 .position
@@ -71,4 +74,30 @@ body {
 .input
 {
   width: 100%;
+}
+
+.react-datetime-picker__inputGroup, button {
+  background-color: seashell;
+}
+.react-datetime-picker__wrapper {
+  border: none;
+}
+
+svg {
+  color: white;
+}
+
+.submit-btn {
+  justify-content: center;
+  display: flex;
+}
+
+.btn {
+  background-color: #fbb162;
+  color: #4a6163;
+  padding: 6px;
+  padding: 6px 0.5cm;
+  border: none;
+  width: 60%;
+  font-size: large;
 }
