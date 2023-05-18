@@ -59,11 +59,11 @@ img {
 
 .logout {
   position:absolute;
+  font-size: 1cm;
   bottom:0;
   margin-bottom: 1rem;
+  margin-left: 1rem;
   width: 100%;
-  border: 1px solid #232f30;
-  background-color: #232f30;
 }
 
 .logout h2 {

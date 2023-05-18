@@ -76,7 +76,7 @@ const EventCalendar = () => {
     };
     
     getEvents(location.state.id)
-
+    
     return (
         <div className="app">
             <div className="sidenav">

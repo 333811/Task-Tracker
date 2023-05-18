@@ -1,5 +1,6 @@
 import React from 'react';
 import "../../css Files/sidebar.css";
+import CustomButton from '../../GlobalComponents/CustomButton';
 
 const Sidebar = ({id}) => {
   return (
@@ -8,12 +9,8 @@ const Sidebar = ({id}) => {
       <a href="https://www.google.com"><img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"/></a>
       </div>
       <a href="https://www.google.com">{id}</a>
-      <a href="https://www.google.com"><i>"Khubaib is the best"</i></a>
 
-      <a class="logout" href='https://www.google.com'>
-        <h2>logout</h2>
-        </a>
-      
+      <CustomButton title={"Logout⇝"} classes={"col-6 logout"} custom={"logout"} onClick={event =>  window.location.href='/LoginSignup'}/>
     </div>
     
   );
