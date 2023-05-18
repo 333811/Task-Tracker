@@ -39,8 +39,14 @@ const localizer = dateFnsLocalizer({
 
 const EventCalendar = () => {
 
-    const [events,setEvents] = useState([])
-    
+    const [events, setEvents] = useState([])
+    const [selected, setSelected] = useState();
+
+    const handleSelected = (event) => {
+        setSelected(event);
+        console.log(event);
+    };
+
     const location = useLocation()
     async function getEvents(id) {
         const email = id;
@@ -49,18 +55,20 @@ const EventCalendar = () => {
                 email
             }).then(res => {
                 const events = res.data;
-                var eventList=[]
+                var eventList = []
                 for (var i = 0; i < events.length; i++) {
                     var event = events[i];
-                    const etitle =event["title"]
+                    const id = event["_id"]
+                    const etitle = event["title"]
                     const estart = new Date(event["start"])
                     const eend = new Date(event["end"])
-    
-                    const object={
+
+                    const object = {
+                        id: id,
                         title: etitle,
                         start: estart,
                         end: eend,
-                        
+
                     }
                     eventList.push(object)
                     setEvents(eventList)
@@ -74,9 +82,9 @@ const EventCalendar = () => {
             console.log(e);
         }
     };
-    
+
     getEvents(location.state.id)
-    
+
     return (
         <div className="app">
             <div className="sidenav">
@@ -84,8 +92,13 @@ const EventCalendar = () => {
             </div>
             <div class="calendar">
                 <Calendar
-                    localizer={localizer} events={events} startAccessor="start" endAccessor="end"
-                    style={{ height: 550, margin: "50px" }} />
+                    localizer={localizer}
+                    events={events}
+                    startAccessor="start"
+                    endAccessor="end"
+                    style={{ height: 550, margin: "50px" }}
+                    selected={selected}
+                    onSelectEvent={handleSelected} />
             </div>
             <PopupForm id={location.state.id} />
         </div>

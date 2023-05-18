@@ -81,7 +81,7 @@ app.post("/events", async (req, res) => {
     }
 
     try {
-        const eventList = await events.find({ email: email } , 'title start end -_id')
+        const eventList = await events.find({ email: email } , 'title start end')
         if (eventList) {
             res.json(eventList)
         }
