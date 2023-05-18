@@ -10,8 +10,8 @@ mongoose.connect("mongodb+srv://Misbah:Gfw9VgLRAqGWPoYI@tasktracker.r8icjc5.mong
 const events = mongoose.model('events', {
     email: { type: String },
     title: { type: String },
-    start: { type: String },
-    end: { type: String }
+    start: { type: Date },
+    end: { type: Date }
 });
 
 module.exports = events

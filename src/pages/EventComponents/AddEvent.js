@@ -11,12 +11,12 @@ const AddEvent = ({ id }) => {
     const { register, control, handleSubmit, formState: { errors }, getValues } = useForm();
 
     async function onSubmit() {
-        console.log("here",getValues(["Title"]));
-        const email= id;
-        const title= getValues('Title');
-        const start= getValues('StartDate');
-        const end= getValues('EndDate');
-        console.log(title, start,end);
+        console.log("here", getValues(["Title"]));
+        const email = id;
+        const title = getValues('Title');
+        const start = getValues('StartDate');
+        const end = getValues('EndDate');
+        console.log(title, start, end);
         try {
             await axios.post("http://localhost:5000/addEvent", {
                 email, title, start, end

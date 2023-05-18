@@ -7,10 +7,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-
-
 app.get("/", cors(), (req, res) => {
-
 })
 
 
@@ -25,15 +22,11 @@ app.post("/login", async (req, res) => {
         else {
             res.json("notexist")
         }
-
     }
     catch (e) {
         res.json("fail")
     }
-
 })
-
-
 
 app.post("/signup", async (req, res) => {
     const { name, email, password } = req.body
@@ -70,7 +63,6 @@ app.post("/addEvent", async (req, res) => {
         start: start,
         end: end
     }
-    console.log(email, title, start, end)
     try {
         res.json("added")
         await events.insertMany([data])
@@ -80,6 +72,30 @@ app.post("/addEvent", async (req, res) => {
     }
 
 })
+
+app.post("/events", async (req, res) => {
+    const {email} = req.body
+
+    const data = {
+        email: email
+    }
+
+    try {
+        const eventList = await events.find({ email: email } , 'title start end -_id')
+        if (eventList) {
+            res.json(eventList)
+        }
+        else {
+            res.json("notexist")
+        }
+
+    }
+    catch (e) {
+        res.json("fail")
+    }
+
+})
+
 app.listen(5000, () => {
     console.log("Listening on port:5000");
 })
